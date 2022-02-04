@@ -4,6 +4,7 @@ class CreatePhones < ActiveRecord::Migration[6.1]
       t.string :number
       t.string :kind
       t.boolean :main
+      t.references :contact, null: false, foreign_key: true
 
       t.timestamps
     end

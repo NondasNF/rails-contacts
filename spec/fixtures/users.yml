@@ -2,12 +2,12 @@
 
 one:
   id: 1
-  name: MyString
+  name: User1
   age: 1
   bio: MyString
 
 two:
   id: 2
-  name: MyString
+  name: User2
   age: 1
   bio: MyString

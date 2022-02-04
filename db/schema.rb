@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,35 +12,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_02_175213) do
-
-  create_table "contacts", force: :cascade do |t|
-    t.string "name"
-    t.date "birthday"
-    t.integer "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_contacts_on_user_id"
+ActiveRecord::Schema.define(version: 20_220_202_175_213) do
+  create_table 'contacts', force: :cascade do |t|
+    t.string 'name'
+    t.date 'birthday'
+    t.integer 'user_id', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['user_id'], name: 'index_contacts_on_user_id'
   end
 
-  create_table "phones", force: :cascade do |t|
-    t.string "number"
-    t.string "kind"
-    t.boolean "main"
-    t.integer "contact_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["contact_id"], name: "index_phones_on_contact_id"
+  create_table 'phones', force: :cascade do |t|
+    t.string 'number'
+    t.string 'kind'
+    t.boolean 'main'
+    t.integer 'contact_id', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['contact_id'], name: 'index_phones_on_contact_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.integer "age"
-    t.string "bio"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'name'
+    t.integer 'age'
+    t.string 'bio'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  add_foreign_key "contacts", "users"
-  add_foreign_key "phones", "contacts"
+  add_foreign_key 'contacts', 'users'
+  add_foreign_key 'phones', 'contacts'
 end

@@ -1,11 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  number: MyString
-  kind: MyString
-  main: false
-
+  contact_id: 1
+  number: 8005001
+  kind: house
+  main: true
+ 
 two:
-  number: MyString
-  kind: MyString
+  contact_id: 1
+  number: 8005002
+  kind: work
   main: false

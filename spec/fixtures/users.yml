@@ -1,11 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  id: 1
+  name: User1
   age: 1
-  biography: MyString
+  bio: MyString
 
 two:
-  name: MyString
+  id: 2
+  name: User2
   age: 1
-  biography: MyString
+  bio: MyString

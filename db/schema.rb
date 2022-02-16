@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2022_02_02_175213) do
 
   create_table "contacts", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.date "birthday"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

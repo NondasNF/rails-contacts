@@ -9,5 +9,11 @@ class Phone < ApplicationRecord
     conditions: -> { where(main: true) }
   }
   validates :kind, presence: true
-  validates :kind, inclusion: { in: %w[house work other] }
+  validate :kind_must_be_equal_to_preset
+
+  def kind_must_be_equal_to_preset
+    return unless kind != 'house' && kind != 'work' && kind != 'other'
+
+    errors.add(:kind, "can't be different from 'house', 'work' and 'other'.")
+  end
 end

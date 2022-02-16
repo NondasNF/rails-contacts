@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2022_02_02_175213) do
   end
 
   create_table 'phones', force: :cascade do |t|
-    t.string 'number'
+    t.string 'number', null: false
     t.string 'kind'
     t.boolean 'main'
     t.integer 'contact_id', null: false
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 2022_02_02_175213) do
   end
 
   create_table 'users', force: :cascade do |t|
-    t.string 'name'
-    t.integer 'age'
-    t.string 'bio'
+    t.string 'name', null: false
+    t.integer 'age', null: false
+    t.string 'bio', null: false
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
   end

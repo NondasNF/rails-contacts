@@ -1,0 +1,7 @@
+<h1>Users#index</h1>
+<h2>All users: </h2>
+<% @users.each do |user| %>
+  <p>Name: <%= user.name %></p>
+  <p>Bio: <%= user.bio %></p>
+  <p>Age: <%= user.age %></p>
+<% end %>

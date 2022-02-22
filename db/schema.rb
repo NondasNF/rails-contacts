@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2022_02_02_175213) do
 
   create_table "contacts", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.date "birthday"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -21,22 +21,22 @@ ActiveRecord::Schema.define(version: 2022_02_02_175213) do
     t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
-  create_table "phones", force: :cascade do |t|
-    t.string "number", null: false
-    t.string "kind", null: false
-    t.boolean "main", null: false
-    t.integer "contact_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["contact_id"], name: "index_phones_on_contact_id"
+  create_table 'phones', force: :cascade do |t|
+    t.string 'number', null: false
+    t.string 'kind'
+    t.boolean 'main'
+    t.integer 'contact_id', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['contact_id'], name: 'index_phones_on_contact_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "age"
-    t.string "bio"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'name', null: false
+    t.integer 'age', null: false
+    t.string 'bio', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
   add_foreign_key "contacts", "users"

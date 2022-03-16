@@ -1,0 +1,11 @@
+<h1>Contact: <%= @contact.id %> </h1>
+<p>Name: <%= @contact.name %></p>
+<p>Birthday: <%= @contact.birthday %></p>
+<p><%= link_to 'Destroy', [@user, @contact], method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<a href="/users/<%= @user.id %>/contacts/<%= @contact.id %>/edit">Edit info...</a>
+<h3> Phone numbers: <%= @phones.length %></h3>
+<% @phones.each do |phone| %>
+  <p>Number: <%= phone.number %></p>
+  <p>Kind: <%= phone.kind %></p>
+  <p>Main?: <%= phone.main ? "Yes" : "No" %></p>  
+<% end %>

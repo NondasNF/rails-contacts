@@ -1,0 +1,22 @@
+<%= form_with model: [@user, @contact] do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @contact.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :birthday %><br>
+    <%= form.date_field :birthday %>
+    <% @contact.errors.full_messages_for(:birthday).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>

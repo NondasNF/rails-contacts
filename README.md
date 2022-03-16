@@ -1,24 +1,10 @@
-# README
+## The app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A phonebook, with the possibilities to create a user, save contacts in this user and save different phone numbers in this contact, each phone number can obviously have a number, a type (Work, Home and Other), a main status this sets is number one main number for this contact and is only available to have one main number at the same time
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### About the technologies
+Full-Stack application developed in Ruby on Rails 
+Unit tests writed in RSpec 
+SQLite database
+  
+#### STATUS: __UNDER DEVELOPMENT__

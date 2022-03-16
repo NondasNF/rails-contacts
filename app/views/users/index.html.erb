@@ -1,7 +1,10 @@
 <h1>Users#index</h1>
 <h2>All users: </h2>
+<a href="/users/new">Create a new</a>
 <% @users.each do |user| %>
   <p>Name: <%= user.name %></p>
   <p>Bio: <%= user.bio %></p>
   <p>Age: <%= user.age %></p>
+  <a href="/users/<%= user.id %>/edit">Edit info...</a>
+  <a href="/users/<%= user.id %>">See more...</a>
 <% end %>

@@ -1,0 +1,16 @@
+<h1>Users#show</h1>
+<a href="/users/">< Back to users</a>
+<h2>User: <%= @user.id %> </h2>
+<p>Name: <%= @user.name %></p>
+<p>Bio: <%= @user.bio %></p>
+<p>Age: <%= @user.age %></p>
+<p><%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<a href="/users/<%= @user.id %>/edit">Edit info...</a>
+<h3> Contacts: </h3>
+<a href="/users/<%= @user.id %>/contacts/new/">New contact</a>
+<% @contacts.each do |contact| %>
+  <p>Name: <%= contact.name %></p>
+  <p>Birthday: <%= contact.birthday %></p>
+  <a href="/users/<%= @user.id %>/contacts/<%= contact.id %> ">See more...</a>
+<% end %>
+ 
